@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ProductCard from './ProductCard';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Dynamic data array for the products
+  const products = [
+    { id: 1, name: "Wireless Headphones", price: "129.99", inStock: true },
+    { id: 2, name: "Mechanical Keyboard", price: "89.99", inStock: false },
+    { id: 3, name: "Smart Watch", price: "199.99", inStock: true }
+  ];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="dashboard-grid">
+      {products.map((product) => (
+        <ProductCard 
+          key={product.id}
+          name={product.name}
+          price={product.price}
+          inStock={product.inStock}
+        />
+      ))}
+    </div>
+  );
 }
 
-export default App
+export default App;

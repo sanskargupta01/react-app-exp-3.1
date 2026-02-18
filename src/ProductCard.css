@@ -1,0 +1,45 @@
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.image-placeholder {
+  background-color: #f0f2f5; /* Light grey from preview */
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.price {
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Colors matching the Experiment requirements */
+.in-stock {
+  background-color: #e6fffa;
+  color: #2d6a4f;
+}
+
+.out-of-stock {
+  background-color: #fff5f5;
+  color: #c53030;
+}
